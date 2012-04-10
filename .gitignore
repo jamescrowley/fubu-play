@@ -1,0 +1,7 @@
+/packages
+/_ReSharper*
+*/obj/*
+*/bin/*
+*.user
+*.ncrunchsolution
+*.suo

@@ -1,0 +1,9 @@
+﻿@model JustWanna.Web.Actions.Profile.ProfileModel
+@using JustWanna.Web.Actions.Profile.AddActivity
+@{ ViewBag.PageTitle = Model.UserName + "\'s profile"; }
+
+<h1>@Model.UserName's profile</h1>
+<p>@Model.Profile</p>
+<h2>Add a new activity</h2>
+
+@Raw(this.Partial(new ProfileAddActivityRequest { UserId = Model.UserId }))

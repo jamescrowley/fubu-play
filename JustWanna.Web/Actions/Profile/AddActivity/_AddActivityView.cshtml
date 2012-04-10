@@ -1,0 +1,12 @@
+﻿@model JustWanna.Web.Actions.Profile.AddActivity.ProfileAddActivityModel
+@using JustWanna.Web.Actions.Profile.AddActivity
+
+<p>Hello from the partial view</p>
+
+@this.FormFor(new ProfileAddActivityModel()).AddClass("well")
+<legend>Add new activity for user @Model.UserId</legend>
+@this.InputFor(x => x.UserId).Hide()
+@this.Edit(x => x.Name)
+
+<input type="submit" value="Submit" />
+@Raw(this.EndForm())

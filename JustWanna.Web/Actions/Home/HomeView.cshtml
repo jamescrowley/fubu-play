@@ -1,0 +1,6 @@
+﻿@model JustWanna.Web.Actions.Home.HomeModel
+@{
+    ViewBag.PageTitle = "Welcome!";
+}
+@using JustWanna.Web.Actions.Profile
+Hello there! <a href="@Urls.UrlFor(new ProfileRequest { Slug = "jc"})">Click here to view a profile.</a>

@@ -1,0 +1,52 @@
+﻿@using Cassette.Views;
+@{
+    Bundles.Reference("scripts/core/");
+    Bundles.Reference("content/styles/bootstrap/");
+    Bundles.Reference("content/styles/default.less");
+}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>@ViewBag.PageTitle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Bundles.RenderStylesheets()
+  </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">JustWanna</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="#">Create a Profile</a>
+              </li>
+              <li class="active">
+                <a href="#">Browse</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="">
+                <a href="#">Sign in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <section id="body">
+            @RenderBody()
+        </section>
+    <footer>
+        
+    </footer>
+  </div>
+@Bundles.RenderScripts()
+</body>
+</html>
